@@ -51,5 +51,6 @@
     display: flex;
     flex-direction: row;
     font-size: 4vh;
+    @apply px-5;
   }
 </style>
