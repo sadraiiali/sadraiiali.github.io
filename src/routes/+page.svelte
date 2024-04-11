@@ -70,10 +70,14 @@
 
 <style lang="scss">
   .links {
+    touch-action: none;
+
     @apply flex flex-col gap-2 border-2 border-gray-500 h-[19rem] w-10 px-2 justify-center;
   }
 
   .photo {
+    touch-action: none;
+
     @apply border-2 border-gray-500 w-60;
   }
 </style>

@@ -9,14 +9,7 @@
 
 <div class="bg">
   <div class="nothing-container">
-    {#if $x > 0}
-      <div class="nothing">Nothing to see here</div>
-    {:else}
-    <div class="nothing justify-end w-full" >
-      چیزی برای دیدن نیست هنوز
-    </div>
-      
-    {/if}
+    <div class="nothing">Nothing to see here</div>
   </div>
   <Motion
     drag="x"
@@ -32,9 +25,12 @@
 
 <style>
   .bg {
+    
     @apply h-full w-full bg-black relative;
   }
   .inside {
+    touch-action: none;
+
     @apply h-full w-full shadow-lg bg-gray-100;
   }
   .nothing-container {
