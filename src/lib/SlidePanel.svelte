@@ -36,14 +36,13 @@
   .nothing-container {
     position: absolute;
     bottom: calc(50% - 100px);
-    left: -50%;
+    left: -50vh;
     height: 200px;
     width: 100vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    font-size: 100px;
     color: white;
     transform: rotate(-90deg) translateY(50%);
   }
@@ -51,5 +50,6 @@
     width: 100vh;
     display: flex;
     flex-direction: row;
+    font-size: 4vh;
   }
 </style>
