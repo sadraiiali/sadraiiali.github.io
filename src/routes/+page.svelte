@@ -1,7 +1,8 @@
 <script>
+  import SlidePanel from "$lib/SlidePanel.svelte";
   import Avatar from "$lib/Avatar.svelte";
   import NameTag from "$lib/NameTag.svelte";
-    
+
   let socialLinks = [
     {
       link: "https://keybase.io/sadraiiali",
@@ -35,33 +36,37 @@
   ];
 </script>
 
-<div class="flex flex-row gap-2 w-full h-full justify-center items-center">
-  <div class="flex flex-col info gap-2">
-    <!-- <img
-      src="img/alireza-sadraii.jpg"
-      class="photo"
-      alt="alireza sadraii rad"
-    /> -->
+<SlidePanel>
+  <div
+    class="flex flex-row gap-2 w-full h-full justify-center items-center"
+    slot="content"
+  >
+    <div class="flex flex-col info gap-2">
+      <!-- <img
+            src="img/alireza-sadraii.jpg"
+            class="photo"
+            alt="alireza sadraii rad"
+          /> -->
 
-    <Avatar />
-    <NameTag/>
-    
-  </div>
+      <Avatar />
+      <NameTag />
+    </div>
 
-  <div class="links">
-    {#each socialLinks as s, i}
-      <a href={s.link} target="_blank" rel="noopener noreferrer">
-        <img
-          src={s.icon}
-          alt={s.alt}
-          class="social-icon"
-          height="20"
-          width="20"
-        />
-      </a>
-    {/each}
+    <div class="links">
+      {#each socialLinks as s, i}
+        <a href={s.link} target="_blank" rel="noopener noreferrer">
+          <img
+            src={s.icon}
+            alt={s.alt}
+            class="social-icon"
+            height="20"
+            width="20"
+          />
+        </a>
+      {/each}
+    </div>
   </div>
-</div>
+</SlidePanel>
 
 <style lang="scss">
   .links {
